@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="553.0" prefWidth="587.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <SplitPane dividerPositions="0.37254901960784315, 0.7397504456327986" layoutX="3.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="563.0" prefWidth="593.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="68.0" prefWidth="477.0">
+          <children>
+            <Label layoutX="29.0" layoutY="29.0" text="Seu">
+              <font>
+                <Font name="System Bold" size="15.0" fx:id="x1" />
+              </font>
+            </Label>
+            <ComboBox fx:id="comboMostrar" layoutX="28.0" layoutY="56.0" onAction="#mostrarCombo" prefWidth="150.0" promptText="-- Selecciona --" />
+            <ListView fx:id="tMostrar" layoutX="202.0" layoutY="24.0" prefHeight="159.0" prefWidth="358.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="35.0" prefWidth="555.0">
+          <children>
+            <Label font="$x1" layoutX="32.0" layoutY="32.0" text="Matrícula:" />
+            <Label font="$x1" layoutX="32.0" layoutY="67.0" text="Model:" />
+            <Label font="$x1" layoutX="31.0" layoutY="105.0" text="Seu:" />
+            <TextField fx:id="tCercarMatricula" layoutX="160.0" layoutY="29.0" />
+            <Label fx:id="labelModel" layoutX="160.0" layoutY="69.0" />
+            <Label fx:id="labelSeu" layoutX="160.0" layoutY="107.0" />
+            <Button fx:id="bCercar" layoutX="190.0" layoutY="148.0" mnemonicParsing="false" onAction="#cercarCotxe" text="Cercar cotxe" />
+            <Button fx:id="bNetejar" layoutX="390.0" layoutY="77.0" mnemonicParsing="false" onAction="#netejar" text="Netejar formulari" />
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="203.0" prefWidth="555.0">
+          <children>
+            <Label font="$x1" layoutX="42.0" layoutY="92.0" text="Seu:" />
+            <Label font="$x1" layoutX="43.0" layoutY="54.0" text="Model:" />
+            <Label font="$x1" layoutX="43.0" layoutY="19.0" text="Matrícula:" />
+            <Button fx:id="bAfegir" layoutX="409.0" layoutY="61.0" mnemonicParsing="false" onAction="#afegirCotxe" text="Afegir cotxe" />
+            <TextField fx:id="tAfegirMatricula" layoutX="165.0" layoutY="16.0" />
+            <TextField fx:id="tAfegirModel" layoutX="164.0" layoutY="56.0" />
+            <ComboBox fx:id="comboAfegir" layoutX="164.0" layoutY="89.0" prefWidth="150.0" promptText="-- Tria seu --" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>
