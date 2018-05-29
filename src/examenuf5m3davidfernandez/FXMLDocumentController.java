@@ -26,6 +26,7 @@ import model.Seu;
 public class FXMLDocumentController implements Initializable, AssignaModel {
 
     private Empresa empresa;
+
     @FXML
     private Label labelModel, labelSeu;
 
@@ -61,7 +62,7 @@ public class FXMLDocumentController implements Initializable, AssignaModel {
             labelModel.setText(c.getModel());
             labelSeu.setText(seu.getNomSeu());
         }
-        
+
     }
 
     @FXML
@@ -69,7 +70,7 @@ public class FXMLDocumentController implements Initializable, AssignaModel {
 //        empresa.afegirCotxeASeu((Seu)comboAfegir.getSelectionModel().getSelectedItem(), new Cotxe(tAfegirMatricula.getText(), tAfegirModel.getText()));
         String matricula = tAfegirMatricula.getText();
         String model = tAfegirModel.getText();
-        
+
         int index = comboAfegir.getSelectionModel().getSelectedIndex();
 
         empresa.afegirCotxeASeu(empresa.getSeus().get(index), new Cotxe(matricula, model));
@@ -89,11 +90,11 @@ public class FXMLDocumentController implements Initializable, AssignaModel {
 //        }
         // mostres en combox els models
         comboMostrar.setItems(FXCollections.observableArrayList(empresa.getSeus()));
-        
+
         // per defecte selecciones la primera opcio per evitar errors
         comboMostrar.getSelectionModel().selectFirst();
         tMostrar.setItems(FXCollections.observableArrayList(empresa.getCotxesSeu(empresa.getSeus().get(0))));
-        
+
         // afegir
         // mostres en combox els models
         comboAfegir.setItems(FXCollections.observableArrayList(empresa.getSeus()));
